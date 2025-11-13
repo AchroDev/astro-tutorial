@@ -36,6 +36,7 @@ h1 {
 }
 
 .nav-links a {
+  border: none;
   display: block;
   text-align: center;
   padding: 10px 0;
