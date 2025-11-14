@@ -34,7 +34,6 @@ const textCase = "uppercase";
             text-transform: var(--textCase);
         }
     </style>
-    <h2>... and my new Astro site!</h2>
     <p>I am working through Astro's introductory tutorial. This is the second page on my webiste, and it's my first Astro project!</p>
 
     <p>This site will update as I complete more of the tutorial, so keep checking back for more updates!</p>
@@ -42,9 +41,9 @@ const textCase = "uppercase";
     <p>Here are a few facts about me:</p>
     <ul>
     <li>My name is {identity.firstName}.</li>
-    <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+    <li>I live in The {identity.country} and I work as a {identity.occupation}.</li>
     {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        <li>Two of my hobbies are: {identity.hobbies[3]} and {identity.hobbies[1]}</li>
     }
     </ul>
     <p>My skills are:</p>
