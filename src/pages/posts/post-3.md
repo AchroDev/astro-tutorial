@@ -1,8 +1,9 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: 'Third Post'
+title: 'Moving Forward'
 pubDate: 2025-11-12
-description: 'This is the third post on my new Astro blog.'
+updated: 2025-11-13
+description: 'This post covers my current accomplishents half-way in'
 author: 'AchroDev'
 image:
     url: 'https://raw.githubusercontent.com/AchroDev/AchroDev/refs/heads/main/assets/logo.svg'
@@ -10,7 +11,13 @@ image:
 tags: ["astro", "updates", "trials"]
 ---
  
+## What I've accomplished:
 
-The Header and Footer are now part of the Markdown Layout astro component.
+1. The Header and Footer are now part of the Markdown Layout astro component.
+2. Completed about 60% of the Blog Tutorial Project from the Astro Docs.
+3. Successfully set the site up to be live on netlify and update when the GitHub repository updates.
+4. Created multiple custom components to use across the site.
 
-We are about mid-way through the tutorial at this point. I have learned quite a bit and refreshed my memory on other skills.
+## What's Next:
+
+Next up is working on learning about using glob imports with the `import.meta.glob()` to create an RSS feed for all blog posts.

@@ -2,6 +2,7 @@
 layout: ../../layouts/BlogLayout.astro
 title: 'Getting Started'
 pubDate: 2025-11-11
+updated: 2025-11-13
 description: 'This is the initial post on my new Astro blog.'
 author: 'AchroDev'
 image:
