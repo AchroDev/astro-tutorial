@@ -1,26 +1,21 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes targeting the branch you set here (e.g., main or master)
   push:
-    branches: ["master"] # <-- Make sure this is your default branch!
+    branches: ["master"]
   
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -28,15 +23,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
         uses: withastro/action@v2
-        # This one action does all of this:
-        # 1. Sets up Node.js
-        # 2. Installs your dependencies (npm/pnpm/yarn)
-        # 3. Runs 'astro build'
-        # 4. Uploads the final 'dist' folder as the GitHub Pages artifact
 
-  # Deploy job
   deploy:
-    needs: build # <-- This is crucial, it waits for the build job to finish
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
