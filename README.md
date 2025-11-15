@@ -1,43 +1,52 @@
-# Astro Starter Kit: Minimal
+<a name="readme-top"></a>
 
-```sh
-npm create astro@latest -- --template minimal
-```
+![License][license-shield]
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<br />
 
-## 🚀 Project Structure
+<div align="center">
+  <a href="https://github.com/AchroDev/astro-tutorial">
+    <img src="https://raw.githubusercontent.com/AchroDev/AchroDev/refs/heads/main/assets/logo.svg" alt="Logo" width="100" height="100">
+  </a>
 
-Inside of your Astro project, you'll see the following folders and files:
+<h3 align="center">Astro Blog</h3>
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+  <p align="center">
+    Here you will find the repository for my personal Astro Blog project.
+    <br />
+  </p>
+</div>
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## About
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+This project started from Astro's introductory documentation found [here][astro-docs]. I decided to take it further (as you should with these projects) and do their optional path, along with my own customization to showcase creativity.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Live site: <a href="https://astro.starsail.dev">astro.starsail.dev</a> hosted on GitHub Pages!
 
-## 🧞 Commands
+## Table of Contents
 
-All commands are run from the root of the project, from a terminal:
+1. [About](#about)
+2. [Contact](#contact)
+3. [Acknowledgements](#acknowledgments)
+4. [License](#license)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Contact
 
-## 👀 Want to learn more?
+Email: [AchroDev][email]
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Acknowledgments
+
+- [Astro Framework][astro]
+
+## License
+
+Released under [MIT](/LICENSE) by [@AchroDev](https://github.com/AchroDev).
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[astro]: https://astro.build/
+[astro-docs]:https://docs.astro.build/en/tutorial/
+[email]: mailto:achrodev@proton.me
+[license-shield]: https://img.shields.io/github/license/AchroDev/astro-tutorial.svg?style=for-the-badge
+[license-url]: https://github.com/AchroDev/astro-tutorial/blob/master/LICENSE.txt
