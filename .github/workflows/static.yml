@@ -1,11 +1,10 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Runs on pushes targeting the branch you set here (e.g., main or master)
   push:
-    branches: ["master"]
-
+    branches: ["master"] # <-- Make sure this is your default branch!
+  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -15,29 +14,34 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Allow one concurrent deployment
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+        # This one action does all of this:
+        # 1. Sets up Node.js
+        # 2. Installs your dependencies (npm/pnpm/yarn)
+        # 3. Runs 'astro build'
+        # 4. Uploads the final 'dist' folder as the GitHub Pages artifact
+
+  # Deploy job
+  deploy:
+    needs: build # <-- This is crucial, it waits for the build job to finish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
